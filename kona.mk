@@ -118,8 +118,10 @@ WITH_DEXPREOPT := true
 WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 
-# Recommend using the non debug dexpreopter
+# ART Debugging (Disable Recommend using the non debug dexpreopter)
 USE_DEX2OAT_DEBUG := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 
 # Dex
 PRODUCT_PROPERTY_OVERRIDES += \
