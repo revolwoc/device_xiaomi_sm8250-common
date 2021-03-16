@@ -39,9 +39,6 @@ sys.displayfeature_hidl=true
 # CNE
 persist.vendor.cne.feature=1
 
-# DPM
-persist.vendor.dpm.feature=11
-
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
