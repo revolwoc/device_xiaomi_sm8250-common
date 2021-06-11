@@ -381,4 +381,6 @@ qemu.hw.mainkeys=0
 # Miui-Extras
 ro.miui.google.csp=true
 
+# WFD
+debug.sf.enable_hwc_vds=1
 
