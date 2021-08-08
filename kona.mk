@@ -196,10 +196,12 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     libadpcmdec
 
+# Dolby
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.audio.dolby.ds2.enabled=true \
     vendor.audio.dolby.ds2.hardbypass=false \
     persist.vendor.audio_fx.current=dolby \
+    ro.audio.monitorRotation=true \
     ro.vendor.dolby.dax.version=DS1_2.2.0.0_r1
 
 # Audio configs
