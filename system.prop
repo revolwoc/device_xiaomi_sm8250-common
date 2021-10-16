@@ -1,6 +1,9 @@
 # Bluetooth
 persist.vendor.btstack.enable.lpa=true 
 
+# Async MTE on system_server
+arm64.memtag.process.system_server=off
+
 # Audio
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
