@@ -1,3 +1,6 @@
+# Allow system_app to read pagetypeinfo
+allow system_app proc_pagetypeinfo:file r_file_perms;
+
 allow system_app vendor_sysfs_battery_supply:dir { search };
 allow system_app vendor_sysfs_battery_supply:file { read };
 allow system_app unlabeled:file { read };
