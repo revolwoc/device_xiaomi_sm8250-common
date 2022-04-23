@@ -1,5 +1,6 @@
 # Bluetooth
-persist.vendor.btstack.enable.lpa=true 
+persist.vendor.btstack.enable.lpa=true
+persist.vendor.bt.a2dp.hal.implementation=true
 
 # Async MTE on system_server
 arm64.memtag.process.system_server=off
