@@ -1,3 +1,6 @@
+# Bluetooth
+persist.vendor.btstack.enable.lpa=true 
+
 # Audio
 persist.audio.button_jack.profile=volume
 persist.audio.button_jack.switch=0
