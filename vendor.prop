@@ -320,9 +320,7 @@ vendor.usb.use_ffs_mtp=0
 vendor.usb.product_string=Poco F3
 
 # Volume steps
-ro.config.media_vol_steps=30
-persist.vendor.audio_hal.dsp_bit_width_enforce_mode=24
-ro.config.vc_call_vol_steps=10
+ro.config.vc_call_vol_steps=11
 
 # System
 persist.sys.binary_xml=false
