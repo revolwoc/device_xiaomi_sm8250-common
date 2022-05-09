@@ -372,10 +372,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_kona
-
-PRODUCT_PACKAGES += \
-    vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -636,6 +633,7 @@ PRODUCT_PACKAGES += \
     init.qti.dcvs.sh
 
 PRODUCT_PACKAGES += \
+    init.fingerprint.rc \
     init.nfc.rc \
     init.qcom.power.rc \
     init.qcom.rc \
