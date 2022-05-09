@@ -139,6 +139,10 @@ ro.vendor.bluetooth.wipower=false
 vendor.qcom.bluetooth.soc=hastings
 vendor.hw.fm.init=0
 
+# Camera
+persist.vendor.camera.perflock.enable=0
+persist.vendor.camera.logInfoMask=false
+
 # Crypto
 ro.crypto.allow_encrypt_override=true
 ro.crypto.dm_default_key.options_format.version=2
