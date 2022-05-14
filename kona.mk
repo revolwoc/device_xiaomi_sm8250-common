@@ -84,12 +84,7 @@ PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
 
 # ART
-# Optimize everything for preopt
-PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
-# Don't preopt prebuilts
-DONT_DEXPREOPT_PREBUILTS := true
-
-# Optimize for speed dexopt
+#optimize for speed dexopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     Phonesky \
@@ -105,13 +100,23 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
 
-# Package Manager
-PRODUCT_PROPERTY_OVERRIDES += \
-    pm.dexopt.boot=verify \
-    pm.dexopt.first-boot=quicken \
-    pm.dexopt.install=speed-profile \
-    pm.dexopt.bg-dexopt=everything \
-    pm.dexopt.ab-ota=quicken
+# Don't build debug for host or device
+ART_BUILD_TARGET_NDEBUG := true
+ART_BUILD_TARGET_DEBUG := false
+ART_BUILD_HOST_NDEBUG := true
+ART_BUILD_HOST_DEBUG := false
+
+# Dex pre-opt
+WITH_DEXPREOPT := true
+WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := false
+WITH_DEXPREOPT_DEBUG_INFO := false
+
+# Recommend using the non debug dexpreopter
+USE_DEX2OAT_DEBUG := false
+
+# SystemUITests
+EXCLUDE_SYSTEMUI_TESTS := true
+
 
 # Task profiles
 PRODUCT_COPY_FILES += \
@@ -301,14 +306,6 @@ PRODUCT_PACKAGES += \
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
-
-# Dex
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
-ART_BUILD_TARGET_NDEBUG := true
-ART_BUILD_TARGET_DEBUG := false
-ART_BUILD_HOST_NDEBUG := true
-ART_BUILD_HOST_DEBUG := false
 
 # Call deleteAllKeys if vold detects a factory reset
 PRODUCT_VENDOR_PROPERTIES += ro.crypto.metadata_init_delete_all_keys.enabled=true
@@ -608,10 +605,6 @@ PRODUCT_PACKAGES += \
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
-
-# Preopt SystemUI
-PRODUCT_DEXPREOPT_SPEED_APPS += \
-    SystemUI
 
 # Power
 PRODUCT_PACKAGES += \
