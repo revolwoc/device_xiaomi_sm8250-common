@@ -419,8 +419,11 @@ PRODUCT_PACKAGES += \
 
 # Keymaster
 PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0 \
+    android.hardware.keymaster@4.0-impl \
+    android.hardware.keymaster@4.0.vendor \
     android.hardware.keymaster@4.1.vendor
-
+   
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
