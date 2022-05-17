@@ -123,3 +123,9 @@
 # WiFi
 /vendor/bin/nv_mac                                                      u:object_r:vendor_wcnss_service_exec:s0
 /data/vendor/mac_addr(/.*)?                                             u:object_r:vendor_wifi_vendor_data_file:s0
+
+# HBM
+/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm           u:object_r:vendor_sysfs_hbm:s0
+
+# Livedisplay
+/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.1-service\.raphael    u:object_r:hal_lineage_livedisplay_qti_exec:s0

@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019-2020 The LineageOS Project
+ * Copyright (C) 2021 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,11 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "SunlightEnhancementService"
+#define LOG_TAG "AntiFlickerService"
 
-#include <android-base/file.h>
+#include "AntiFlicker.h"
 #include <android-base/logging.h>
-#include <android-base/strings.h>
-
-#include "SunlightEnhancement.h"
+#include <fstream>
 
 namespace vendor {
 namespace lineage {
@@ -28,24 +26,22 @@ namespace livedisplay {
 namespace V2_1 {
 namespace implementation {
 
-static constexpr const char* kHbmStatusPath =
-        "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/hbm";
+static constexpr const char* kDcDimmingPath =
+    "/sys/devices/platform/soc/soc:qcom,dsi-display-primary/msm_fb_ea_enable";
 
-Return<bool> SunlightEnhancement::isEnabled() {
-    std::string buf;
-    if (!android::base::ReadFileToString(kHbmStatusPath, &buf)) {
-        LOG(ERROR) << "Failed to read " << kHbmStatusPath;
-        return false;
-    }
-    return std::stoi(android::base::Trim(buf)) == 1;
+Return<bool> AntiFlicker::isEnabled() {
+    std::ifstream file(kDcDimmingPath);
+    int result = -1;
+    file >> result;
+    LOG(DEBUG) << "Got result " << result << " fail " << file.fail();
+    return !file.fail() && result > 0;
 }
 
-Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
-    if (!android::base::WriteStringToFile((enabled ? "1" : "0"), kHbmStatusPath)) {
-        LOG(ERROR) << "Failed to write " << kHbmStatusPath;
-        return false;
-    }
-    return true;
+Return<bool> AntiFlicker::setEnabled(bool enabled) {
+    std::ofstream file(kDcDimmingPath);
+    file << (enabled ? "1" : "0");
+    LOG(DEBUG) << "setEnabled fail " << file.fail();
+    return !file.fail();
 }
 
 }  // namespace implementation
