@@ -83,10 +83,6 @@ persist.vendor.data.mode=concurrent
 # IORap
 ro.iorapd.enable=true
 
-# SSR
-persist.vendor.ssr.enable_ramdumps=1
-persist.vendor.ssr.restart_level=ALL_ENABLE
-
 # Use Vulkan backend for Skia UI rendering
 debug.hwui.renderer=skiavk
 
