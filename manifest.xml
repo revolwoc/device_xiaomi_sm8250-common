@@ -335,4 +335,8 @@
         <transport>hwbinder</transport>
         <fqname>@1.0::ITouchFeature/default</fqname>
     </hal>
+    <hal format="aidl">
+        <name>android.hardware.power</name>
+        <fqname>IPower/default</fqname>
+    </hal>
 </manifest>
