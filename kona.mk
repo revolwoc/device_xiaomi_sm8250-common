@@ -332,6 +332,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.12.vendor:64 \
     vendor.display.config@1.13.vendor:64 \
     vendor.display.config@1.14.vendor:64 \
+    vendor.display.config@1.16.vendor \
     vendor.display.config@2.0.vendor:64 \
     vendor.qti.hardware.display.allocator@3.0.vendor:64 \
     vendor.qti.hardware.display.allocator@4.0.vendor:64 \
@@ -346,6 +347,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.mapperextensions@1.0.vendor \
     vendor.qti.hardware.display.mapperextensions@1.1.vendor \
     vendor.qti.hardware.display.mapperextensions@1.2.vendor \
+    vendor.qti.hardware.display.mapperextensions@1.3.vendor \
     vendor.qti.hardware.display.demura@1.0.vendor \
     vendor.qti.hardware.display.demura@2.0.vendor
 
