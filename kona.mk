@@ -111,6 +111,9 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/task_profiles/cgroups_31.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/cgroups_31.json \
     $(LOCAL_PATH)/task_profiles/task_profiles_31.json:$(TARGET_COPY_OUT_SYSTEM)/etc/task_profiles/task_profiles_31.json
 
+PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
+PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
+
 # Dex
 PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.boot-dex2oat-cpu-set=1,2,3,4,5,6,7 \
