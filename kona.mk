@@ -89,6 +89,13 @@ PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := everything
 # Don't preopt prebuilts
 DONT_DEXPREOPT_PREBUILTS := true
 
+# Optimize for speed dexopt
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    Phonesky \
+    GoogleServicesFramework \
+    SystemUI
+
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
