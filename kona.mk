@@ -542,7 +542,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/media_profiles_kona.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_kona.xml \
     $(LOCAL_PATH)/media/media_profiles_V1_0.xml:$(TARGET_COPY_OUT_ODM)/etc/media_profiles_V1_0.xml \
     $(LOCAL_PATH)/media/media_profiles_vendor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_profiles_vendor.xml \
-    $(LOCAL_PATH)/media/media_codecs_system_default.xml.:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default.xml
+    $(LOCAL_PATH)/media/media_codecs_system_default.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_system_default.xml
 
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8250/media/conf_files/kona/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
