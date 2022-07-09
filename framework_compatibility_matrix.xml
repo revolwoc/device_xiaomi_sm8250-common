@@ -118,13 +118,13 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>vendor.lineage.livedisplay</name>
-        <version>2.0-1</version>
+        <version>2.0</version>
         <interface>
-            <name>IPictureAdjustment</name>
+            <name>IDisplayModes</name>
             <instance>default</instance>
         </interface>
         <interface>
-            <name>IAntiFlicker</name>
+            <name>IPictureAdjustment</name>
             <instance>default</instance>
         </interface>
         <interface>

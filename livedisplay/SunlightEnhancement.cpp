@@ -25,7 +25,7 @@
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_1 {
+namespace V2_0 {
 namespace implementation {
 
 static constexpr const char* kHbmStatusPath =
@@ -41,7 +41,7 @@ Return<bool> SunlightEnhancement::isEnabled() {
 }
 
 Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
-    if (!android::base::WriteStringToFile((enabled ? "0x20000" : "0xE0000"), kHbmStatusPath)) {
+    if (!android::base::WriteStringToFile((enabled ? "0x10000" : "0xF0000"), kHbmStatusPath)) {
         LOG(ERROR) << "Failed to write " << kHbmStatusPath;
         return false;
     }
@@ -49,7 +49,7 @@ Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
 }
 
 }  // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_0
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor

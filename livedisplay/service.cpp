@@ -14,46 +14,24 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "vendor.lineage.livedisplay@2.1-service.xiaomi_kona"
+#define LOG_TAG "vendor.lineage.livedisplay@2.0-service.alioth"
 
 #include <android-base/logging.h>
 #include <binder/ProcessState.h>
 #include <hidl/HidlTransportSupport.h>
 
-#include "AntiFlicker.h"
 #include "SunlightEnhancement.h"
-#include "livedisplay/sdm/SDMController.h"
 
-using android::OK;
-using android::sp;
-using android::status_t;
-
-using ::vendor::lineage::livedisplay::V2_0::sdm::SDMController;
-using ::vendor::lineage::livedisplay::V2_1::IAntiFlicker;
-using ::vendor::lineage::livedisplay::V2_1::ISunlightEnhancement;
-using ::vendor::lineage::livedisplay::V2_1::implementation::AntiFlicker;
-using ::vendor::lineage::livedisplay::V2_1::implementation::SunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_0::ISunlightEnhancement;
+using ::vendor::lineage::livedisplay::V2_0::implementation::SunlightEnhancement;
 
 int main() {
-    status_t status = OK;
-    std::shared_ptr<SDMController> controller = std::make_shared<SDMController>();
-    sp<AntiFlicker> af = new AntiFlicker();
-    sp<SunlightEnhancement> se = new SunlightEnhancement();
+    android::sp<ISunlightEnhancement> sunlightEnhancement = new SunlightEnhancement();
+
     android::hardware::configureRpcThreadpool(1, true /*callerWillJoin*/);
 
-    // AntiFlicker service
-    status = af->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Could not register service for LiveDisplay HAL AntiFlicker Iface ("
-                   << status << ")";
-        return 1;
-    }
-
-    // SunlightEnhancement service
-    status = se->registerAsService();
-    if (status != OK) {
-        LOG(ERROR) << "Could not register service for LiveDisplay HAL SunlightEnhancement Iface ("
-                   << status << ")";
+    if (sunlightEnhancement->registerAsService() != android::OK) {
+        LOG(ERROR) << "Cannot register sunlight enhancement HAL service.";
         return 1;
     }
 
