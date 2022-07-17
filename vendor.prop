@@ -241,6 +241,12 @@ ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 vendor.gralloc.disable_ubwc=0
 
+# IMS
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableQXDMLogs=1
+
 # Telephony
 telephony.active_modems.max_count=2
 
@@ -272,6 +278,9 @@ sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Radio
 persist.radio.multisim.config=dsds
+persist.radio.snapshot_enabled=0
+persist.radio.snapshot_timer=0
+persist.rcs.otp_sms_port=0
 persist.rcs.supported=1
 persist.vendor.data.iwlan.enable=true
 persist.vendor.radio.5g_mode_pref=0
@@ -285,17 +294,15 @@ persist.vendor.radio.efssync=true
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.force_on_dc=true
 persist.vendor.radio.ignore_dom_time=10
-persist.vendor.radio.mt_sms_ack=30
-persist.vendor.radio.report_codec=1
-persist.vendor.radio.vdp_on_ims_cap=1
-persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.process_sups_ind=1
 persist.vendor.radio.rat_on=combine
 persist.vendor.radio.sib16_support=1
 persist.vendor.radio.uicc_se_enabled=true
+persist.vendor.radio.add_power_save=1
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.com.android.dataroaming=false
-ro.telephony.default_network=22,22
+persist.vendor.qti.telephony.vt_cam_interface=2
 
 # Refresh Rate
 ro.surface_flinger.set_display_power_timer_ms=1000
