@@ -301,7 +301,6 @@ persist.vendor.radio.uicc_se_enabled=true
 persist.vendor.radio.add_power_save=1
 rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
 ro.com.android.dataroaming=false
-persist.vendor.qti.telephony.vt_cam_interface=2
 
 # Refresh Rate
 ro.surface_flinger.set_display_power_timer_ms=1000
