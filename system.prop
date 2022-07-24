@@ -135,8 +135,8 @@ persist.radio.snapshot_enabled=0
 persist.radio.snapshot_timer=0
 persist.rcs.otp_sms_port=0
 
-# Netmgr
-persist.vendor.data.mode=concurrent
+# Radiot
+persist.vendor.radio.report_codec=1
 
 # IORap
 ro.iorapd.enable=true
