@@ -231,6 +231,15 @@ vendor/lib64/libstagefrightdolby.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
 vendor/lib64/vendor.dolby.hardware.dms@2.0.so
 
+# Dolby OnePlus Imports
+system_ext/etc/permissions/privapp-com.dolby.daxappui.xml
+system_ext/etc/permissions/privapp-com.dolby.daxservice.xml
+system_ext/etc/sysconfig/config-com.dolby.daxappui.xml
+system_ext/etc/sysconfig/config-com.dolby.daxservice.xml
+system_ext/etc/sysconfig/hiddenapi-com.dolby.daxservice.xml
+-system_ext/priv-app/DaxUI/DaxUI.apk
+-system_ext/priv-app/daxService/daxService.apk
+
 # Dolby MediaCodecs
 vendor/lib/libstagefright_soft_ac4dec.so
 vendor/lib/libstagefright_soft_ddpdec.so
