@@ -350,14 +350,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     IFAAService
 
-# IORAP Feature -- Imported from LA.QSSI.12.0.r1-07100.01-qssi.0
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
-
-# IORAP Feature -- Readahead
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
@@ -397,10 +389,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.mlipay@1.1.vendor \
     vendor.xiaomi.hardware.mtdservice@1.0.vendor
-
-# MultiGen LRU
-PRODUCT_SYSTEM_PROPERTIES += \
-    persist.device_config.mglru_native.lru_gen_config=all
 
 # Net
 PRODUCT_PACKAGES += \
@@ -588,10 +576,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_SOONG_NAMESPACES += \
     vendor/qcom/opensource/usb/etc
-
-# USAP Pool
-PRODUCT_SYSTEM_PROPERTIES += \
-  persist.device_config.runtime_native.usap_pool_enabled=true
 
 # Vendor service manager
 PRODUCT_PACKAGES += \
