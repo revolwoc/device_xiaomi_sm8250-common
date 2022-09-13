@@ -97,14 +97,11 @@ arm64.memtag.process.system_server=off
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
 
+# ZRAM writeback
+ro.zram.mark_idle_delay_mins=60
+ro.zram.first_wb_delay_mins=180
+ro.zram.periodic_wb_delay_hours=24
+
 # Blur
 ro.surface_flinger.supports_background_blur=1
 ro.sf.blurs_are_expensive=1
-
-# RIL Powersaving
-persist.radio.add_power_save=1 
-pm.sleep_mode=1 
-ro.ril.disable.power.collapse=0 
-ro.ril.fast.dormancy.rule=1 
-ro.ril.fast.dormancy.timeout=3
-ro.mot.eri.losalert.delay=100
