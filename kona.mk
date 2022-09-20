@@ -185,6 +185,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl \
+    android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
     vendor.qti.hardware.bluetooth_dun@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
@@ -212,6 +213,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
+
+PRODUCT_PACKAGES += \
+    libldacBT_enc \
+    libldacBT_abr
 
 # Camera
 PRODUCT_PACKAGES += \
