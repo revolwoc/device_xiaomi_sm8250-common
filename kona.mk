@@ -191,6 +191,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio@4.0-impl
+    
+# Codec2
+PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
+    android.hardware.media.c2@1.0.vendor \
+    libcodec2_hidl@1.0.vendor
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -198,7 +204,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.bluetooth.audio@2.1-impl \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
-    vendor.qti.hardware.bluetooth_dun@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor \
     vendor.qti.hardware.fm@1.0.vendor
