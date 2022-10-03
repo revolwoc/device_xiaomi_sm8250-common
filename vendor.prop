@@ -250,6 +250,9 @@ sys.fflag.override.settings_enable_monitor_phantom_procs=false
 persist.vendor.quick.charge=1
 
 # Radio
+persist.radio.vendor.NO_STAPA=1
+persist.radio.vendor.VT_HYBRID_ENABLE=1
+persist.radio.dynamic_sar=false
 persist.radio.multisim.config=dsds
 persist.rcs.supported=0
 persist.vendor.data.mode=concurrent
