@@ -591,7 +591,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/xiaomi \
     hardware/qcom-caf/wlan
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
     vendor/qcom/opensource/usb/etc
 
 # Seccomp policy
