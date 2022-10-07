@@ -125,13 +125,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Audio
 PRODUCT_PACKAGES += \
-    android.hardware.audio@6.0-impl \
-    android.hardware.audio.effect@6.0-impl \
     android.hardware.audio.service \
-    android.hardware.soundtrigger@2.0-impl \
-    android.hardware.soundtrigger@2.3-impl \
-    vendor.qti.hardware.audiohalext@1.0.vendor \
-    android.hardware.bluetooth.a2dp@1.0
+    android.hardware.soundtrigger@2.2-impl \
+    android.hardware.soundtrigger@2.3-impl
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -187,10 +183,30 @@ PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml
 
-# Audio-Legacy for Muting logspam
+# Audio-Legacy for Muting logspam | From hardware/qcom-caf/sm8250/audio/configs/kona/kona.mk
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-service \
     android.hardware.audio@2.0-impl \
-    android.hardware.audio@4.0-impl
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.1-impl \
+    android.hardware.audio@4.0 \
+    android.hardware.audio.common@4.0 \
+    android.hardware.audio.common@4.0-util \
+    android.hardware.audio@4.0-impl \
+    android.hardware.audio.effect@4.0 \
+    android.hardware.audio.effect@4.0-impl \
+    android.hardware.audio@5.0 \
+    android.hardware.audio.common@5.0 \
+    android.hardware.audio.common@5.0-util \
+    android.hardware.audio@5.0-impl \
+    android.hardware.audio.effect@5.0 \
+    android.hardware.audio.effect@5.0-impl \
+    android.hardware.audio@6.0 \
+    android.hardware.audio.common@6.0 \
+    android.hardware.audio.common@6.0-util \
+    android.hardware.audio@6.0-impl \
+    android.hardware.audio.effect@6.0 \
+    android.hardware.audio.effect@6.0-impl
     
 # Codec2
 PRODUCT_PACKAGES += \
