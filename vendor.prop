@@ -327,9 +327,6 @@ ro.hardware.wlan.mimo=1
 # 0: no dbs, 1: 1x1 dbs, 2: 2x2 dbs
 ro.hardware.wlan.dbs=2
 
-# WFD
-debug.sf.enable_hwc_vds=0
-
 # Fling
 ro.min.fling_velocity=160 
 ro.max.fling_velocity=20000
