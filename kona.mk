@@ -15,6 +15,9 @@ ifeq ($(TARGET_IS_VAB),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/compression_with_xor.mk)
 endif
 
+# Platform
+TARGET_BOARD_PLATFORM := kona
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
