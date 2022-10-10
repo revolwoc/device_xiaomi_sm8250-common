@@ -72,6 +72,3 @@ on boot && property:ro.boot.product.hardware.sku=nfc
     enable secureelement-hal_1_2
     enable vendor.nfc_hal_service
 
-# Touch
-on boot
-    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
