@@ -117,6 +117,10 @@ arm64.memtag.process.system_server=off
 # Disable blur on app launch
 ro.launcher.blur.appLaunch=0
 
+#Enable Blur Props
+ro.sf.blurs_are_expensive=1 \
+ro.surface_flinger.supports_background_blur=1
+
 # ZRAM writeback
 ro.zram.mark_idle_delay_mins=60
 ro.zram.first_wb_delay_mins=180
