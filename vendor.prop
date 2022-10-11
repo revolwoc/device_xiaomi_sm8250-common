@@ -317,4 +317,4 @@ ro.hardware.wlan.mimo=1
 ro.hardware.wlan.dbs=2
 
 # WFD
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
