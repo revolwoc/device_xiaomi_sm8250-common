@@ -589,7 +589,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi \
-    hardware/qcom-caf/wlan
+    hardware/qcom-caf/wlan \
     hardware/google/interfaces \
     hardware/google/pixel \
     vendor/qcom/opensource/usb/etc
