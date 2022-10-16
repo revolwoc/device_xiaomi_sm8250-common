@@ -48,7 +48,9 @@ ro.vendor.qti.va_aosp.support=1
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
-persist.demo.hdmirotationlock=false
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
+ro.hwui.use_vulkan=false
 
 # SkiaGL Threaded
 debug.renderengine.backend=skiaglthreaded
